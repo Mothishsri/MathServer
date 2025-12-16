@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>Mileage Calculator</title>
+    <style>
+        body 
+        {
+            background: linear-gradient(rgb(254, 4, 4), black);
+        }
+        .id1 
+        {
+            text-align: center;
+            color: black;
+        }
+        .box 
+        {
+            text-align: center;
+            width: 30%;
+            background:linear-gradient(rgb(5, 255, 80),blue);
+            border: dashed 4px rgb(251, 254, 255);
+            padding: 15px;
+            margin: 50px auto;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="id1">Mileage Calculation!</h1>
+    <div class="box">
+        <h2>Calculator</h2>
+        <h3>MOTHISH.S(25010659)</h3>
+
+        <form method="post">
+            {% csrf_token %}
+            <label>distance travelled..</label>
+            <br>
+            <input type="number" name="distance"> Km
+            <br>
+            <br>
+            <label>fuel consumed</label>
+            <br>
+            <input type="number" name="liters"> L
+            <br>
+            <br>
+            <button type="submit">Calculate</button>
+            <br>
+            <br>
+            <label>kilometre travelled per Litre</label>
+            <br>
+            <input type="number" name="Mileage" value={{miles}}>Km/L
+        </form>
+    </div>
+</body>
+</html>
